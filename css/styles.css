@@ -189,6 +189,7 @@ img {
 
 .navbar.scrolled .nav-logo img {
     height: 52px;
+    filter: brightness(0.18);
 }
 
 .nav-links {
