@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180">
+  <defs>
+    <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8a87c"/>
+      <stop offset="50%" style="stop-color:#d08c60"/>
+      <stop offset="100%" style="stop-color:#b87333"/>
+    </linearGradient>
+    <linearGradient id="copperLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0c8a0"/>
+      <stop offset="100%" style="stop-color:#d4956a"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d0d0d0"/>
+      <stop offset="50%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#d0d0d0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Thin horizontal rules -->
+  <line x1="80" y1="42" x2="340" y2="42" stroke="url(#copper)" stroke-width="0.75" opacity="0.5"/>
+  <line x1="80" y1="128" x2="340" y2="128" stroke="url(#copper)" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- OTF large letters — using clean geometric sans style -->
+  <text x="210" y="105" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="72" letter-spacing="18" fill="url(#steel)" filter="url(#glow)">OTF</text>
+
+  <!-- Copper accent line through the middle -->
+  <line x1="120" y1="85" x2="300" y2="85" stroke="url(#copperLight)" stroke-width="1" opacity="0.35"/>
+
+  <!-- ENTERPRISES text — wide tracked, clean -->
+  <text x="210" y="148" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="14" letter-spacing="8" fill="url(#copper)">ENTERPRISES</text>
+
+  <!-- LLC subtle -->
+  <text x="210" y="166" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9" letter-spacing="4" fill="#808080">LLC</text>
+
+  <!-- Small diamond accents flanking OTF -->
+  <polygon points="95,75 100,80 95,85 90,80" fill="url(#copper)" opacity="0.6"/>
+  <polygon points="325,75 330,80 325,85 320,80" fill="url(#copper)" opacity="0.6"/>
+</svg>
